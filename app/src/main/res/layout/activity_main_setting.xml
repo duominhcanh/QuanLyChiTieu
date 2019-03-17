@@ -9,7 +9,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView2"
@@ -22,5 +22,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/language_items" />
+
     </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            android:onClick="btnAcceptClicked"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="btnCancelClicked"/>
+    </LinearLayout>
+
 </LinearLayout>
