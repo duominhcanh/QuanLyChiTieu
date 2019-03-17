@@ -4,6 +4,7 @@
     <string name="menu_language">Language</string>
     <string name="accept">Accept</string>
     <string name="cancel">Cancel</string>
+    <string name="moneyout"></string>
 
     <string-array name="language_items">
         <item name="vienamese">Tiếng Việt</item>
