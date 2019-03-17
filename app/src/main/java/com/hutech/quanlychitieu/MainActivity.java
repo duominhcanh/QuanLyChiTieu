@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TabHost;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addControls();
+    }
+
+    private void addControls() {
+        TabHost host = (TabHost) findViewById(R.id.tabHost);
+        host.setup();
+        TabHost.TabSpec spec = host.newTabSpec("Tab One");
+        spec.setContent(R.id.tab1);
+        spec.setIndicator("Tab One");
+        host.addTab(spec);
+        //Tab 2
+        spec = host.newTabSpec("Tab Two");
+        spec.setContent(R.id.tab2);
+        spec.setIndicator("Tab Two");
+        host.addTab(spec);
+
+        //Tab 3
+        spec = host.newTabSpec("Tab Three");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("Tab Three");
+        host.addTab(spec);
+        //Tab 4
+        spec = host.newTabSpec("Tab Four");
+        spec.setContent(R.id.tab4);
+        spec.setIndicator("Tab Four");
+        host.addTab(spec);
     }
 
     @Override
