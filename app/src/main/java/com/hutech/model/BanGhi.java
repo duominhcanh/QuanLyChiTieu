@@ -5,18 +5,7 @@ public class BanGhi {
     private String noiDung;
     private String thoiGian;
     private String soTien;
-    private String maDongTien;
-
-    public BanGhi(int ma, String noiDung, String thoiGian, String soTien, String maDongTien) {
-        this.ma = ma;
-        this.noiDung = noiDung;
-        this.thoiGian = thoiGian;
-        this.soTien = soTien;
-        this.maDongTien = maDongTien;
-    }
-
-    public BanGhi() {
-    }
+    private String maHoatDong;
 
     public int getMa() {
         return ma;
@@ -50,11 +39,22 @@ public class BanGhi {
         this.soTien = soTien;
     }
 
-    public String getMaDongTien() {
-        return maDongTien;
+    public String getMaHoatDong() {
+        return maHoatDong;
     }
 
-    public void setMaDongTien(String maDongTien) {
-        this.maDongTien = maDongTien;
+    public void setMaHoatDong(String maHoatDong) {
+        this.maHoatDong = maHoatDong;
+    }
+
+    public BanGhi(int ma, String noiDung, String thoiGian, String soTien, String maHoatDong) {
+        this.ma = ma;
+        this.noiDung = noiDung;
+        this.thoiGian = thoiGian;
+        this.soTien = soTien;
+        this.maHoatDong = maHoatDong;
+    }
+
+    public BanGhi() {
     }
 }
