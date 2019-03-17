@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">QuanLyChiTieu</string>
-    <string name="menu_setting">Cài đặt</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_language">Language</string>
+
+    <string-array name="language_items">
+        <item name="vienamese">Tiếng Việt</item>
+        <item name="engilsh">English</item>
+    </string-array>
+
 </resources>
