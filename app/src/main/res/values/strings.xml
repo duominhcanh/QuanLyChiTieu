@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QuanLyChiTieu</string>
+    <string name="menu_setting">Cài đặt</string>
 </resources>
