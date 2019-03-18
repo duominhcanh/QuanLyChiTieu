@@ -2,7 +2,7 @@ package com.hutech.model;
 
 public class DongTien {
     private int maDongTien;
-    private String tenDOngTien;
+    private String tenDongTien;
 
     public int getMaDongTien() {
         return maDongTien;
@@ -12,17 +12,17 @@ public class DongTien {
         this.maDongTien = maDongTien;
     }
 
-    public String getTenDOngTien() {
-        return tenDOngTien;
+    public String getTenDongTien() {
+        return tenDongTien;
     }
 
-    public void setTenDOngTien(String tenDOngTien) {
-        this.tenDOngTien = tenDOngTien;
+    public void setTenDongTien(String tenDongTienngTien) {
+        this.tenDongTien = tenDongTien;
     }
 
-    public DongTien(int maDongTien, String tenDOngTien) {
+    public DongTien(int maDongTien, String tenDongTien) {
         this.maDongTien = maDongTien;
-        this.tenDOngTien = tenDOngTien;
+        this.tenDongTien = tenDongTien;
     }
 
     public DongTien() {

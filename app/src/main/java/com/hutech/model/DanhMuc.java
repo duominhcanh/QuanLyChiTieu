@@ -1,11 +1,14 @@
 package com.hutech.model;
 
-public class BanGhi {
+import java.util.ArrayList;
+
+public class DanhMuc {
     private int ma;
     private String noiDung;
     private String thoiGian;
     private String soTien;
-    private String maHoatDong;
+
+    private ArrayList<BanGhi> banGhis;
 
     public int getMa() {
         return ma;
@@ -39,28 +42,19 @@ public class BanGhi {
         this.soTien = soTien;
     }
 
-    public String getMaHoatDong() {
-        return maHoatDong;
-    }
-
-    public void setMaHoatDong(String maHoatDong) {
-        this.maHoatDong = maHoatDong;
-    }
-
-    public BanGhi(int ma, String noiDung, String thoiGian, String soTien, String maHoatDong) {
+    public DanhMuc(int ma, String noiDung, String thoiGian, String soTien) {
         this.ma = ma;
         this.noiDung = noiDung;
         this.thoiGian = thoiGian;
         this.soTien = soTien;
-        this.maHoatDong = maHoatDong;
     }
 
-    public BanGhi() {
+    public DanhMuc() {
     }
 
     @Override
     public String toString() {
-        return "BanGhi{" +
+        return "DanhMuc{" +
                 "ma=" + this.ma +
                 ", noiDung='" + this.noiDung + '\'' +
                 ", thoiGian='" + this.thoiGian + '\'' +
