@@ -1,30 +1,30 @@
 package com.hutech.model;
 
 public class DongTien {
-    private int maDongTien;
-    private String tenDongTien;
+    private int maDong;
+    private String tenDong;
 
-    public int getMaDongTien() {
-        return maDongTien;
-    }
-
-    public void setMaDongTien(int maDongTien) {
-        this.maDongTien = maDongTien;
-    }
-
-    public String getTenDongTien() {
-        return tenDongTien;
-    }
-
-    public void setTenDongTien(String tenDongTienngTien) {
-        this.tenDongTien = tenDongTien;
-    }
-
-    public DongTien(int maDongTien, String tenDongTien) {
-        this.maDongTien = maDongTien;
-        this.tenDongTien = tenDongTien;
+    public DongTien(int maDong, String tenDong) {
+        this.maDong = maDong;
+        this.tenDong = tenDong;
     }
 
     public DongTien() {
+    }
+
+    public int getMaDong() {
+        return maDong;
+    }
+
+    public void setMaDong(int maDong) {
+        this.maDong = maDong;
+    }
+
+    public String getTenDong() {
+        return tenDong;
+    }
+
+    public void setTenDong(String tenDong) {
+        this.tenDong = tenDong;
     }
 }
