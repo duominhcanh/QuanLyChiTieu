@@ -1,5 +1,7 @@
 package com.hutech.model;
 
+import android.widget.ArrayAdapter;
+
 public class BanGhi {
     private int ma;
     private String noiDung;
@@ -58,13 +60,5 @@ public class BanGhi {
     public BanGhi() {
     }
 
-    @Override
-    public String toString() {
-        return "BanGhi{" +
-                "ma=" + this.ma +
-                ", noiDung='" + this.noiDung + '\'' +
-                ", thoiGian='" + this.thoiGian + '\'' +
-                ", soTien='" + this.soTien + '\'' +
-                '}';
-    }
+
 }
