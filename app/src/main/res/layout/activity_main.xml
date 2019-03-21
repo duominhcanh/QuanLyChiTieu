@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tabHost"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -13,7 +15,11 @@
             android:id="@android:id/tabs"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            >
+
+        </TabWidget>
 
         <FrameLayout
             android:id="@android:id/tabcontent"
@@ -26,12 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="This is tab 1" />
-
+                <include layout="@layout/tab1"/>
             </LinearLayout>
 
             <LinearLayout
@@ -62,11 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="This is tab 4" />
+                <include layout="@layout/info"/>
             </LinearLayout>
         </FrameLayout>
     </RelativeLayout>
