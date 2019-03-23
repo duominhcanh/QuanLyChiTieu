@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         // Tab layout END <<<<<<<<<<<<<
 
         // Load controls trên tab 1
-        btnAddRecord= findViewById(R.id.btnAddRecord);
+        //btnAddRecord= findViewById(R.id.btnAddRecord);
         lvTab1= findViewById(R.id.lvTab1);
 
     }
