@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Monaget</string>
-    <string name="act_AddRecord">Thêm bản ghi</string>
-    <string name="act_EditRecord">Sửa thông tin bản ghi</string>
-    <string name="act_Search">Tìn bản ghi</string>
-
-</resources>
