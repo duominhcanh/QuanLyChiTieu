@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên Ứng Dụng"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản Lý Chi Tiêu"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Người Hướng Dẫn"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trần Duy Thanh"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thành Viên Nhóm"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dương Minh Cảnh"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Phạm Tường Duy"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phạm Mạnh Tú"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trần Thị Ngọc Trâm"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trần Trung Quân"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Version"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.0.0.0.0.0.0"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Quản Lý Chi Tiêu là một phần mềm giúp mọi người có thể kiểm soát chi tiêu một cách hợp lý. Với các chức năng vừa đơn giản, dễ sử dụng lại còn tiện lợi và hữu ích. Mong rằng ứng dụng sẽ giúp đỡ mọi người. Xin cảm ơn mọi người đã tin tưởng sử dụng ứng dụng này chúc mọi người thành công với kế hoạch mình đề ra." />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
