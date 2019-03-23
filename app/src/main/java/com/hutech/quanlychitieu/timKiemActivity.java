@@ -14,14 +14,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.hutech.adapter.BanGhiAdapter;
 import com.hutech.model.BanGhi;
 import com.hutech.model.DongTien;
 import com.hutech.model.StringWithTag;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class timKiemActivity extends AppCompatActivity {
     String DATABASE_NAME="quanlychitieu.db";
@@ -44,7 +47,7 @@ public class timKiemActivity extends AppCompatActivity {
     Calendar calendar1= Calendar.getInstance();
 
     ImageView imgX;
-    EditText edtMoTa, edtSoTienTim;
+    EditText edtMieuTa, edtSoTienMuonTim;
 
 
     @Override
@@ -93,10 +96,10 @@ public class timKiemActivity extends AppCompatActivity {
     }
 
     private void xoaThongTinDaNhap() {
-        edtSoTienTim.setText(" ");
-        edtMoTa.setText(" ");
-        edtSoTienTim.setHint("Nhập mô tả khoản thu/chi");
-        edtSoTienTim.setHint("Nhập số tiền bạn muốn tìm");
+        edtSoTienMuonTim.setText(" ");
+        edtMieuTa.setText(" ");
+        edtMieuTa.setHint("Nhập mô tả khoản thu/chi");
+        edtSoTienMuonTim.setHint("Nhập số tiền bạn muốn tìm");
     }
 
     private void moManHinhDatePickerDialog1() {
@@ -175,17 +178,34 @@ public class timKiemActivity extends AppCompatActivity {
         btnNgayBD=findViewById(R.id.btnNgayBD);
         btnNgayKT=findViewById(R.id.btnNgayKT);
 
-        edtMoTa=findViewById(R.id.edtMieuTa);
-        edtSoTienTim=findViewById(R.id.edtSoTienMuonTim);
+        edtMieuTa=findViewById(R.id.edtMieuTa);
+        edtSoTienMuonTim=findViewById(R.id.edtSoTienMuonTim);
         imgX= findViewById(R.id.imgX);
     }
 
-    public void xuLyTim(View view) {
+    public void xuLyTim(View view) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+        Date date1 = format.parse("20/3/2018");
+        Date date2 = format.parse("20/2/2018");
+
+
+
         database= openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null);
+        String tenMieuTa= edtMieuTa.getText().toString();
+        int soTienTim;
+        try{
+            soTienTim=Integer.parseInt(edtSoTienMuonTim.getText().toString());
+        }
+        catch (Exception e){
+            soTienTim=0;
+            //Toast.makeText(this, "Nhập số tiền muốn tìm!", Toast.LENGTH_SHORT).show();
+        }
+
+
         Cursor cursor= database.rawQuery(
-                "select b.ma, b.noiDung,  b.thoiGian, b.soTien, b.maHoatDong, h.tenHoatDong, h.maDongTien, d.tenDong " +
-                        "from BanGhi b, DongTien d, HoatDong h " +
-                        "where b.maHoatDong= h.maHoatDong and h.maDongTien= d.maDong"
+                "select  b.ma, b.noiDung,  b.thoiGian, b.soTien, b.maHoatDong, h.tenHoatDong, h.maDongTien, d.tenDong  "+
+                        "from BanGhi b, DongTien d, HoatDong h "+
+                        "where b.maHoatDong= h.maHoatDong and h.maDongTien= d.maDong and b.soTien >="+ soTienTim
                 , null);
         while(cursor.moveToNext()){
             int    ma=             cursor.getInt(0);
@@ -200,7 +220,6 @@ public class timKiemActivity extends AppCompatActivity {
             BanGhi banGhi= new BanGhi(ma, noiDung, thoiGian,
                     soTien, maHoatDong, tenHoatDong, maDongTien, tenDong);
             banGhiAdapter.add(banGhi);
-
         }
     }
 

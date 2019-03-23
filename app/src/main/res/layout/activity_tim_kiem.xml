@@ -104,7 +104,6 @@
                 android:inputType="textPersonName" />
 
             <ImageView
-
                 android:id="@+id/imgX"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -131,7 +130,8 @@
                 android:layout_span="2"
                 android:ems="10"
                 android:hint="Nhập số tiền muốn tìm "
-                android:inputType="textPersonName" />
+                android:inputType="number"
+                android:numeric="integer" />
 
             <ImageView
                 android:id="@+id/imgSeach"
